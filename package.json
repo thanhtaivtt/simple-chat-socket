@@ -1,0 +1,14 @@
+{
+  "name": "chat-application",
+  "version": "1.0.0",
+  "description": "more toidicode.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "toidicode.com"
+  ],
+  "author": "Vu Thanh Tai",
+  "license": "ISC"
+}
