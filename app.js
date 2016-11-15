@@ -18,14 +18,26 @@ app.get('/',function(req,res){
 })
 //creat array;
 var arr = [];
+var user=[];
 // event connect
 io.on("connection", function(socket){
   console.log("Co nguoi ket noi! ");
-
+  socket.on('send_user',function(dt){
+  		user.push(dt);
+  		socket.user=dt
+  		console.log(dt);
+  		});
   socket.on("send_data", function(data){
     arr.push(data);
-    io.sockets.emit("data_send",  {ct:data});
-  });
+    io.sockets.emit("data_send",  {ct:data,ur:socket.user});
+    console.log(arr);
+  	});
+
+  
 });
+io.on('disconnect', function () {
+		console.log("ngat");
+
+  });
 //port 3000
-http.listen(3000);
+http.listen(process.env.PORT||3000);
