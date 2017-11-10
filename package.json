@@ -4,11 +4,17 @@
   "description": "more toidicode.com",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "keywords": [
     "toidicode.com"
   ],
   "author": "Vu Thanh Tai",
-  "license": "ISC"
+  "license": "ISC",
+    "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4"
+    }
 }
